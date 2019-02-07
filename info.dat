@@ -1,0 +1,25 @@
+Network Security - Project Proposal
+Date: 16/4/2018
+
+Project Name: Anonymity System
+
+
+
+Abstract:
+The objective of this project is to create a system for anonymizing communication between a client and a server. The Anonymity system may consist of one or more intermediate nodes that properly encrypt and decrypt messages exchange between the two endpoints. The server may be unaware of the anonymity system.
+Both key exchange and communication confidentiality should be provided.
+
+Programming Language: ANY
+
+
+
+Description:
+
+An anonymity system is a system that tries to hide the evidence that two parties are communicating.  This can be provided through proper intermediate nodes (anonymity proxy or network) acting as intermediate system in order to decouple the packets sent by an endpoint from the packets received by the other endpoint. A description of anonymity systems and anonymity networks can be found in the course section "NetSec-2-Protocols-04_AnonymitySystems".
+
+The objective of this project is to implement a low-latency or high-latency anonymity system used by a client to protect the communication with a server.
+The simplest scenario involves a client, one intermediate node (Anonymous Proxy or Mix), and a server. In a more general scenario, there could be the client, two or more intermediate nodes, and the server.
+
+The server may be considered as aware or unaware of the anonymity system. In the latter case the last node should act as exit node and appears to the server as application endpoint.
+Communication between adjacent anonymity nodes should be encrypted using symmetric cryptography. Symmetric keys should be initialized (created or transported) using asymmetric cryptography.
+The underling transport protocol between adjacent nodes can be either TCP or TCP. UDP is suggested for simplicity. 
